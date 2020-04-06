@@ -10,7 +10,7 @@ import MaterialsForm from './pages/Materials/MaterialsForm/MaterialsForm';
 const Routes: FunctionComponent = () => {
   return (
     <HashRouter>
-      <Redirect from={mainRoute} exact to={materialsFormRoute} />
+      <Redirect from={mainRoute} exact to={homeRoute} />
       <Route path={homeRoute} exact component={Home} />
       
       <Route path={materialsRoute} exact component={Materials} />
