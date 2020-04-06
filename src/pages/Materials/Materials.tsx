@@ -11,19 +11,19 @@ import { ResultPaginate } from '../../models/types/paginate.types';
 import { MaterialsService } from '../../services/materials.service';
 import './Materials.scss';
 
-let isActive = true;
 const Materials = () => {
   const [resultPaginate, setResultPaginate] = useState<ResultPaginate<Material>>();
   const [activePage, setActivePage] = useState(1);
 
   useEffect(() => {
-    loadMaterials();
+    let isActive = true;
+    loadMaterials(1, isActive);
     return () => {
       isActive = false;
     };
   }, []);
 
-  const loadMaterials = (page?: number) => {
+  const loadMaterials = (page?: number, isActive?: boolean) => {
     MaterialsService.paginate({ page })
       .then((result) => {
         if (isActive) {
