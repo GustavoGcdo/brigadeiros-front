@@ -16,19 +16,13 @@ const Materials = () => {
   const [activePage, setActivePage] = useState(1);
 
   useEffect(() => {
-    let isActive = true;
-    loadMaterials(1, isActive);
-    return () => {
-      isActive = false;
-    };
+    loadMaterials();
   }, []);
 
-  const loadMaterials = (page?: number, isActive?: boolean) => {
+  const loadMaterials = (page?: number) => {
     MaterialsService.paginate({ page })
       .then((result) => {
-        if (isActive) {
-          setResultPaginate(result.data);
-        }
+        setResultPaginate(result.data);
       })
       .catch((err) => {
         console.log('deu ruim', err);
