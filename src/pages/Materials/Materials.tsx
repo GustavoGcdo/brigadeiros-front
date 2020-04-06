@@ -76,7 +76,7 @@ const Materials = () => {
             <div className="content">
               <span className="title">{material.name}</span>
               <span className="secondary-text">
-                Quantidade: {Format.treatData(material.quantity)}
+                Quantidade: {Format.treatData(material.quantityOfProducts)}
               </span>
               <span className="secondary-text">
                 Comprado dia: {Format.stringDate(material.purchaseDate)}
