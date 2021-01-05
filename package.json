@@ -19,7 +19,7 @@
     "@types/react-text-mask": "^5.4.6",
     "@unform/core": "^2.0.0",
     "@unform/web": "^2.0.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "date-fns": "^2.11.1",
     "node-sass": "^4.13.1",
     "react": "^16.13.1",
